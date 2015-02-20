@@ -1,2 +1,2 @@
-# gaet-et-tal
+# Gæt et tal
 Enkelt spil til programmerings projekt
