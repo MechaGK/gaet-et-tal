@@ -43,7 +43,8 @@ int main()
 {
     spil = new Spil();
 
-    for(vector<Svaerhedsgrad>::iterator itr = spil->svaerhedsgrader.begin(); itr != spil->svaerhedsgrader.end(); ++itr){
+    for(vector<Svaerhedsgrad>::iterator itr = spil->svaerhedsgrader.begin(); itr != spil->svaerhedsgrader.end(); ++itr)
+    {
         svaerhedsgrader.push_back(itr->navn);
     }
 
