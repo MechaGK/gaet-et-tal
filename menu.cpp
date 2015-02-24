@@ -2,6 +2,7 @@
 #include <limits>
 #include <vector>
 #include "menu.h"
+#include "funktioner.h"
 
 using namespace std;
 
@@ -32,16 +33,10 @@ void Menu::Tegn()
 
 int Menu::FaValg()
 {
-    cout << "Valg: ";
-    int valg;
-    while(!(cin >> valg) || valg < 1 || valg > antalPunkter){
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "Ugyldigt valg, det skal være et tal mellem 1 og " << antalPunkter << endl;
-        cout << "Valg: ";
-    }
 
-    return valg;
+    return LaesTal(1, antalPunkter) - 1;
+
+    return valg - 1;
 }
 
 void Menu::Vis()
