@@ -33,10 +33,7 @@ void Menu::Tegn()
 
 int Menu::FaValg()
 {
-
-    return LaesTal(1, antalPunkter) - 1;
-
-    return valg - 1;
+    return LaesTal(1, antalPunkter, "Valg: ") - 1;
 }
 
 void Menu::Vis()
