@@ -24,7 +24,8 @@ Menu::~Menu()
 void Menu::Tegn()
 {
     string punkt;
-    for (int i = 0; i < punkter.size(); i++){
+    for (int i = 0; i < punkter.size(); i++)
+    {
         punkt = punkter[i];
         punkt[0] = toupper(punkt[0]);
         cout << i + 1 << ". " << punkt << endl;

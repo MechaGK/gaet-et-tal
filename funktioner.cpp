@@ -8,10 +8,11 @@ int LaesTal(int minimum, int maksimum, string ord)
 {
     cout << ord;
     int input;
-    while(!(cin >> input) || input < minimum || input > maksimum){
+    while(!(cin >> input) || input < minimum || input > maksimum)
+    {
         cin.clear();
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "Ugyldigt input, det skal være et tal mellem " << minimum << " og " << maksimum << endl;
+        cout << "Ugyldigt valg, det skal være et tal mellem " << minimum << " og " << maksimum << endl;
         cout << ord;
     }
 

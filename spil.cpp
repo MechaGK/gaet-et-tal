@@ -46,11 +46,13 @@ void Spil::Start()
     int gaetBrugt, gaet;
     bool vundet = false;
 
-    for (int i = 0; i < svaerhedsgrad.antalGaet; ++i){
+    for (int i = 0; i < svaerhedsgrad.antalGaet; ++i)
+    {
         cout << i + 1 << ". gæt: ";
         gaet = LaesTal(1, svaerhedsgrad.maksTal, "");
 
-        if (gaet == hemmeligtTal){
+        if (gaet == hemmeligtTal)
+        {
             cout << gaet << " er tallet, du har vundet!" << endl;
             gaetBrugt = i + 1;
             vundet = true;
@@ -60,6 +62,18 @@ void Spil::Start()
         {
             cout << gaet << " er ikke det korrekte tal. Tallet du leder efter er ";
             cout << (gaet < hemmeligtTal ? "større" : "mindre") << "." << endl;
+        }
+    }
+
+    if (vundet)
+    {
+        string name = "";
+        cout << "Dit navn: ";
+        cin << name;
+
+        if (name.length() < 1)
+        {
+            cout << "Skriv et navn: ";
         }
     }
 }
