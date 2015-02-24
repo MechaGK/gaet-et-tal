@@ -16,13 +16,13 @@ void HovedmenuHandterInput(int valg)
 {
     switch (valg)
     {
-        case 1:
+        case 0:
             svaerhedsgradsMenu->Vis();
             break;
-        case 2:
+        case 1:
             cout << "ranglister" << endl;
             break;
-        case 3:
+        case 2:
             aaben = false;
             break;
         default:
@@ -32,7 +32,8 @@ void HovedmenuHandterInput(int valg)
 
 void SvarhedgradsHandterInput(int valg)
 {
-
+    spil->SaetSvaerhedgrad(valg);
+    spil->Start();
 }
 
 vector<string> hovedmenuPunkter = {"spil", "ranglister", "afslut"};
