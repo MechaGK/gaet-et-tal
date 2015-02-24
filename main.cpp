@@ -36,14 +36,19 @@ void SvarhedgradsHandterInput(int valg)
 }
 
 vector<string> hovedmenuPunkter = {"spil", "ranglister", "afslut"};
-vector<string> svaerhedsgrader = { "let",  "mellem", "svært"};
-
+vector<string> svaerhedsgrader;
 
 int main()
 {
+    spil = new Spil();
+
+    for(vector<Svaerhedsgrad>::iterator itr = spil->svaerhedsgrader.begin(); itr != spil->svaerhedsgrader.end(); ++itr){
+        svaerhedsgrader.push_back(itr->navn);
+    }
+
     hovedmenu = new Menu("Velkommen til Gæt et tal", hovedmenuPunkter, HovedmenuHandterInput);
     svaerhedsgradsMenu = new Menu("Vælg sværhedsgrad", svaerhedsgrader, SvarhedgradsHandterInput);
-    spil = new Spil();
+
 
     while (aaben)
     {
