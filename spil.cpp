@@ -1,4 +1,5 @@
 #include "spil.h"
+#include "funktioner.h"
 #include <iostream>
 #include <vector>
 
@@ -38,10 +39,32 @@ Spil::~Spil()
 
 void Spil::Start()
 {
+    int hemmeligtTal = rand() % svaerhedsgrad.maksTal + 1;
+    cout << "Du har valgt " << svaerhedsgrad.navn << "." << endl;
+    cout << "Du har " << svaerhedsgrad.antalGaet << " til at gætte et tal mellem 1 og " << svaerhedsgrad.maksTal << "." << endl;
 
+    int gaetBrugt, gaet;
+    bool vundet = false;
+
+    for (int i = 0; i < svaerhedsgrad.antalGaet; ++i){
+        cout << i + 1 << ". gæt: ";
+        gaet = LaesTal(1, svaerhedsgrad.maksTal, "");
+
+        if (gaet == hemmeligtTal){
+            cout << gaet << " er tallet, du har vundet!" << endl;
+            gaetBrugt = i + 1;
+            vundet = true;
+            break;
+        }
+        else
+        {
+            cout << gaet << " er ikke det korrekte tal. Tallet du leder efter er ";
+            cout << (gaet < hemmeligtTal ? "større" : "mindre") << "." << endl;
+        }
+    }
 }
 
-void Spil::SaetSvaerhedgrad()
+void Spil::SaetSvaerhedgrad(int nySvaerhedsgrad)
 {
-
+    svaerhedsgrad = svaerhedsgrader[nySvaerhedsgrad];
 }

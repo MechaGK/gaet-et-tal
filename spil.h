@@ -7,10 +7,11 @@ class Spil
 {
 public:
     std::vector<Svaerhedsgrad> svaerhedsgrader;
+    Svaerhedsgrad svaerhedsgrad;
     Spil();
     ~Spil();
     void Start();
-    void SaetSvaerhedgrad();
+    void SaetSvaerhedgrad(int nySvaerhedsgrad);
 };
 
 #endif // SPIL_H
