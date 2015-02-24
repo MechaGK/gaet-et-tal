@@ -36,7 +36,7 @@ void SvarhedgradsHandterInput(int valg)
 }
 
 vector<string> hovedmenuPunkter = {"spil", "ranglister", "afslut"};
-vector<string> svaerhedsgrader = { "let",  "mellem", "svaert"};
+vector<string> svaerhedsgrader = { "let",  "mellem", "svært"};
 
 
 int main()
