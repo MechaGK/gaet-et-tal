@@ -1,7 +1,6 @@
 #include <iostream>
-#include <string>
-#include <limits>
-#include <memory>
+#include <array>
+#include <list>
 #include "menu.h"
 #include "spil.h"
 
@@ -31,27 +30,25 @@ void HovedmenuHandterInput(int valg)
     }
 }
 
-void SpilmenuHandterInput(int valg)
+void SvarhedgradsHandterInput(int valg)
 {
 
 }
 
-string hovedmenuPunkter [3] = { "Spil", "Ranglister", "Afslut"};
-string svaerhedsgrader [3] = { "let",  "mellem", "svært"};
+vector<string> hovedmenuPunkter = {"spil", "ranglister", "afslut"};
+vector<string> svaerhedsgrader = { "let",  "mellem", "svaert"};
 
 
 int main()
 {
     hovedmenu = new Menu("Velkommen til Gæt et tal", hovedmenuPunkter, HovedmenuHandterInput);
-    svaerhedsgradsMenu = new Menu("Vælg sværhedsgrad", svaerhedsgrader, SpilmenuHandterInput);
+    svaerhedsgradsMenu = new Menu("Vælg sværhedsgrad", svaerhedsgrader, SvarhedgradsHandterInput);
     spil = new Spil();
 
     while (aaben)
     {
         hovedmenu->Vis();
     }
-
-
 
     return 0;
 }
