@@ -1,5 +1,5 @@
-#include <iostream>
 #include <limits>
+#include "funktioner.h"
 
 using namespace  std;
 
@@ -10,11 +10,16 @@ int LaesTal(int minimum, int maksimum, string ord)
     int input;
     while(!(cin >> input) || input < minimum || input > maksimum)
     {
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        RydCin();
         cout << "Ugyldigt valg, det skal være et tal mellem " << minimum << " og " << maksimum << endl;
         cout << ord;
     }
 
     return input;
+}
+
+void RydCin()
+{
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }

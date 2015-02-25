@@ -4,6 +4,7 @@
 
 
 int LaesTal(int minimum, int maksimum, std::string ord);
+void RydCin();
 
 #endif // FUNKTIONER
 

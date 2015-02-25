@@ -1,6 +1,4 @@
-#include <iostream>
 #include <limits>
-#include <vector>
 #include "menu.h"
 #include "funktioner.h"
 
@@ -23,6 +21,7 @@ Menu::~Menu()
 
 void Menu::Tegn()
 {
+    cout << titel << endl;
     string punkt;
     for (int i = 0; i < punkter.size(); i++)
     {
