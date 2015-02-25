@@ -41,12 +41,13 @@ void Spil::Start()
 {
     int hemmeligtTal = rand() % svaerhedsgrad.maksTal + 1;
     cout << "Du har valgt " << svaerhedsgrad.navn << "." << endl;
-    cout << "Du har " << svaerhedsgrad.antalGaet << " til at gætte et tal mellem 1 og " << svaerhedsgrad.maksTal << "." << endl;
+    //cout << "Du har " << svaerhedsgrad.antalGaet << " til at gætte et tal mellem 1 og " << svaerhedsgrad.maksTal << "." << endl;
+    cout << "Gæt et tal mellem 1 og " << svaerhedsgrad.maksTal << endl;
 
     int gaetBrugt, gaet;
     bool vundet = false;
 
-    for (int i = 0; i < svaerhedsgrad.antalGaet; ++i)
+    for (int i = 0; i < svaerhedsgrad.maksTal; ++i)
     {
         cout << i + 1 << ". gæt: ";
         gaet = LaesTal(1, svaerhedsgrad.maksTal, "");
