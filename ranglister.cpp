@@ -94,7 +94,7 @@ namespace Ranglister
         return "rangliste_" + svaerhedsgrad.navn + ".txt";
     }
 
-    Resultater SorterResultater(list<Resultat> resultater)
+    Rangliste SorterResultater(list<Resultat> resultater)
     {
         cout << "Begynder sortering af " << resultater.size() << " resultater" << endl;
 

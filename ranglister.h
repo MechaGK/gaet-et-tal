@@ -6,12 +6,14 @@
 #include <list>
 #include <vector>
 
+typedef std::vector<Resultat> Rangliste;
+
 namespace Ranglister
 {
     void NytResultat(Resultat resultat);
     std::list<Resultat> HentResultater(Svaerhedsgrad svaerhedsgrad);
     std::string RanglisteFilNavn(Svaerhedsgrad svaerhedsgrad);
-    Resultater SorterResultater(std::list<Resultat> resultater);
+    Rangliste SorterResultater(std::list<Resultat> resultater);
 }
 
 #endif // RANGLISTER

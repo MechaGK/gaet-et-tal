@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include <array>
 #include <list>
 #include <random>
@@ -8,7 +9,8 @@
 
 void HovedmenuHandterInput(int valg);
 void SvarhedgradsHandterInput(int valg);
-void VisRangliste();
+void Ranglister();
+void VisRangliste(Svaerhedsgrad svaerhedsgrad);
 
 using namespace std;
 
@@ -20,6 +22,7 @@ bool aaben = true;
 
 vector<string> hovedmenuPunkter = {"spil", "ranglister", "afslut"};
 vector<string> svaerhedsgrader;
+vector<Resultater> ranglister;
 
 int main()
 {
@@ -53,7 +56,7 @@ void HovedmenuHandterInput(int valg)
             svaerhedsgradsMenu->Vis();
             break;
         case 1:
-            VisRangliste();
+            Ranglister();
             break;
         case 2:
             aaben = false;
@@ -69,8 +72,9 @@ void SvarhedgradsHandterInput(int valg)
     spil->Start();
 }
 
-void VisRangliste()
+void Ranglister()
 {
+    vector<string> menuPunkter;
     vector<Resultater> ranglister;
     Resultater rangliste;
     for(vector<Svaerhedsgrad>::iterator itr = spil->svaerhedsgrader.begin(); itr != spil->svaerhedsgrader.end(); ++itr)
@@ -78,8 +82,22 @@ void VisRangliste()
         rangliste = Ranglister::SorterResultater(
                     Ranglister::HentResultater((*itr)));
         ranglister.push_back(rangliste);
+
+        menuPunkter.push_back("Vis rangliste for " + itr->navn);
     }
 
+
+
+    Menu* menu = new Menu("", menuPunkter, NULL);
+    menu->Vis();
+}
+
+void VisRangliste(Svaerhedsgrad svaerhedsgrad)
+{
+    cout << setfill('_') << setw(26) << "_" << endl;
+    cout << "|_" << "NR." << "_|_";
+    cout << setfill('_') << setw(10) << "NAVN" << "_|_";
+    cout << "GÆT" << "_|" << endl;
     rangliste = ranglister[0];
     for(int i = 0; i < 10; ++i)
     {
@@ -87,7 +105,9 @@ void VisRangliste()
         {
             break;
         }
-        cout << i + 1 << ". " << rangliste[i].navn << "    " << rangliste[i].gaet << endl;
+        cout << "|" << setfill('_') << setw(3) << i + 1 << "._|_";
+        cout << setfill('_') << setw(10) << rangliste[i].navn << "_|_";
+        cout << setfill('_') << setw(3) <<  rangliste[i].gaet << "_|" << endl;
     }
 }
 

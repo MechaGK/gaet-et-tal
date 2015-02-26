@@ -12,7 +12,5 @@ struct Resultat
     Svaerhedsgrad svaerhedsgrad;
 };
 
-typedef std::vector<Resultat> Resultater;
-
 #endif // RESULTAT
 
