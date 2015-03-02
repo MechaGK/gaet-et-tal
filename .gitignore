@@ -1,3 +1,9 @@
+.sdf
+.sln
+.suo
+.filters
+
+
 # Compiled Object files
 *.slo
 *.lo
@@ -27,5 +33,4 @@
 *.out
 *.app
 
-#Qt Creator
-CMakeLists*
+Debug

@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{4BCE3602-DD89-4796-A4F3-254014B510A4}</ProjectGuid>
+    <ProjectGuid>{9F576652-BEBA-4CF1-91CA-9726D7A82117}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -74,17 +74,18 @@
     <ClCompile Include="source\funktioner.cpp" />
     <ClCompile Include="source\main.cpp" />
     <ClCompile Include="source\menu.cpp" />
-    <ClCompile Include="source\ranglister.cpp" />
-    <ClCompile Include="source\spil.cpp" />
+    <ClCompile Include="source\program.cpp" />
+    <ClCompile Include="source\leaderboards.cpp" />
+    <ClCompile Include="source\game.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\funktioner.h" />
-    <ClInclude Include="headers\general.h" />
-    <ClInclude Include="headers\menu.h" />
-    <ClInclude Include="headers\ranglister.h" />
-    <ClInclude Include="headers\resultat.h" />
-    <ClInclude Include="headers\spil.h" />
-    <ClInclude Include="headers\svaerhedsgrad.h" />
+    <ClInclude Include="source\functions.h" />
+    <ClInclude Include="source\menu.h" />
+    <ClInclude Include="source\leaderboards.h" />
+    <ClInclude Include="source\program.h" />
+    <ClInclude Include="source\result.h" />
+    <ClInclude Include="source\game.h" />
+    <ClInclude Include="source\difficulty.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -24,33 +24,36 @@
     <ClCompile Include="source\menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\ranglister.cpp">
+    <ClCompile Include="source\program.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\spil.cpp">
+    <ClCompile Include="source\leaderboards.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\game.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="headers\funktioner.h">
+    <ClInclude Include="source\menu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\general.h">
+    <ClInclude Include="source\functions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\menu.h">
+    <ClInclude Include="source\leaderboards.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\ranglister.h">
+    <ClInclude Include="source\result.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\resultat.h">
+    <ClInclude Include="source\game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\spil.h">
+    <ClInclude Include="source\difficulty.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="headers\svaerhedsgrad.h">
+    <ClInclude Include="source\program.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

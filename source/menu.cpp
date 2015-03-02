@@ -1,46 +1,45 @@
 #include <limits>
+#include <string>
 #include "menu.h"
-#include "funktioner.h"
+#include "functions.h"
 
 using namespace std;
 
-Menu::Menu(string titel, vector<string> punkter, void (*handterFunktion)(int))
+Menu::Menu(string title, vector<string> entries, void(*function)(int))
 {
-    this->titel = titel;
-    this->punkter = punkter;
-    this->handterFunktion = handterFunktion;
-    this->antalPunkter = punkter.size();
+	this->title = title;
+	this->entries = entries;
+	this->function = function;
+    this->numberEntries = entries.size();
 }
 
 Menu::~Menu()
 {
-    titel;
-    vector<string>().swap(punkter);
-    handterFunktion;
+    vector<string>().swap(entries);
 }
 
-void Menu::Tegn()
+void Menu::Draw()
 {
-    cout << titel << endl;
-    string punkt;
-    for (int i = 0; i < punkter.size(); i++)
+    cout << title << endl;
+	string entry;
+	for (int i = 0; i < entries.size(); i++)
     {
-        punkt = punkter[i];
-        punkt[0] = toupper(punkt[0]);
-        cout << i + 1 << ". " << punkt << endl;
+		entry = entries[i];
+		entry[0] = toupper(entry[0]);
+		cout << i + 1 << ". " << entry << endl;
     }
 }
 
-int Menu::FaValg()
+int Menu::GetChoice()
 {
-    return LaesTal(1, antalPunkter, "Valg: ") - 1;
+    return GetNumber(1, numberEntries, "Valg: ") - 1;
 }
 
-void Menu::Vis()
+void Menu::Show()
 {
-    Tegn();
-    int valg = FaValg();
-    handterFunktion(valg);
+    Draw();
+    int valg = GetChoice();
+    function(valg);
 }
 
 

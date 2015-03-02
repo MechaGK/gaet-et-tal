@@ -5,16 +5,16 @@
 
 class Menu
 {
-    std::string titel;
-    std::vector<std::string> punkter;
-    int antalPunkter;
-    void (*handterFunktion)(int);
+	std::string title;
+	std::vector<std::string> entries;
+	int numberEntries;
+	void(*function)(int);
 public:
-    Menu(std::string titel, std::vector<std::string> punkter, void (*handterFunktion)(int));
-    ~Menu();
-    void Tegn();
-    int FaValg();
-    void Vis();
+	Menu(std::string title, std::vector<std::string> entries, void(*function)(int));
+	~Menu();
+	void Draw();
+	int GetChoice();
+	void Show();
 
 };
 

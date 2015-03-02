@@ -1,24 +1,25 @@
 #include <limits>
-#include "funktioner.h"
+#include <string>
+#include "functions.h"
 
 using namespace  std;
 
 //Få et tal input fra brugeren mellem to tal
-int LaesTal(int minimum, int maksimum, string ord)
+int GetNumber(int minimum, int maximum, string word)
 {
-    cout << ord;
+    cout << word;
     int input;
-    while(!(cin >> input) || input < minimum || input > maksimum)
+	while (!(cin >> input) || input < minimum || input > maximum)
     {
-        RydCin();
-        cout << "Ugyldigt valg, det skal være et tal mellem " << minimum << " og " << maksimum << endl;
-        cout << ord;
+		ClearCin();
+		cout << "Ugyldigt valg, det skal være et tal mellem " << minimum << " og " << maximum << endl;
+		cout << word;
     }
 
     return input;
 }
 
-void RydCin()
+void ClearCin()
 {
     cin.clear();
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
