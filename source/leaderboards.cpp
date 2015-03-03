@@ -144,9 +144,9 @@ namespace Leaderboards
 	{
 		if (leaderboard.size() > 0)
 		{
-			cout << setfill('_') << setw(26) << "_" << endl;
+			cout << setfill('_') << setw(48) << "_" << endl;
 			cout << "|_" << "NR." << "_|_";
-			cout << setfill('_') << setw(10) << "NAME" << "_|_";
+			cout << setfill('_') << setw(30) << "NAME" << "_|_";
 			cout << "GUESS" << "_|" << endl;
 			for (int i = 0; i < 10; ++i)
 			{
@@ -155,7 +155,7 @@ namespace Leaderboards
 					break;
 				}
 				cout << "|" << setfill('_') << setw(3) << i + 1 << "._|_";
-				cout << setfill('_') << setw(10) << leaderboard[i].name << "_|_";
+				cout << setfill('_') << setw(30) << leaderboard[i].name << "_|_";
 				cout << setfill('_') << setw(4) << leaderboard[i].guesses << "__|" << endl;
 			}
 		}

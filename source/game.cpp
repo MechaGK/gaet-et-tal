@@ -75,10 +75,19 @@ void Game::Start()
         cout << "Your name: ";
 		while (getline(cin, name))
         {
-			if (name != "")
+			if (name.size() > 30)
+			{
+				cout << "Your name is too long!" << endl;
+				cout << "Your name: ";
+			}
+			else if (name != "")
             {
                 break;
             }
+			else
+			{
+				cout << "Your name: ";
+			}
         }
 
         Result result;
